@@ -7,10 +7,10 @@ function mostrarAumento()
 {
 	let numUno;
 
-	numUno = parseFloat(document.getElementById("txtIdSueldo").value);
+	numUno = parseInt(document.getElementById("txtIdSueldo").value);
 
 	
-	document.getElementById("txtIdResultado").value = (numUno * 1.1).toFixed(2);
+	document.getElementById("txtIdResultado").value = parseInt(numUno * 1.10);
 
 	
 }
