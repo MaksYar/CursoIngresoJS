@@ -10,5 +10,50 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+    let precioUn=35;
+    let precioTot
+    let nLamp;
+    let descuento;
+    let marca;
+    let precioConDescuento;
+    let totalConIibb;
+    let iibb;
+
+        nLamp = (document.getElementById("txtIdCantidad").value);
+        marca = document.getElementById("Marca").value;
+        
+        if (nLamp >= 6) 
+        {
+        precioTot = nLamp * precioUn * 0.5;
+        }  
+        else if (nLamp == 5)
+            {
+            if (marca = "ArgentinaLuz")
+            {
+            precioTot = nLamp * precioUn * 0.6;
+            else
+            precioTot = nLamp * precioUn * 0.7;
+        }
+        }
+        if (nLamp == 4)
+        {
+        if (marca = "ArgentinaLuz")
+        {
+        precioTot = nLamp * precioUn * 0.6;
+        else
+        precioTot = nLamp * precioUn * 0.7;
+
+
+        if (nLamp )
+        }
+
+      precioConDescuento=parseFloat(((cantLamparas*precio)*descuento)).toFixed(2);
+      document.getElementById("txtIdprecioDescuento").value=precioConDescuento;
+
+        if (precioConDescuento > 120) {
+            totalConIibb= precioConDescuento *1.10;
+            iibb=totalConIibb - precioConDescuento;
+                alert ("Ud. pago " + totalConIibb+ " siendo " +iibb+ " el impuesto que se pagó")
+           
+        }
 }
