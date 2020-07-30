@@ -48,6 +48,9 @@ function mostrar()
 
 
 /*
+	let vHora;
+	vHora = parseInt(document.getElementById("txtIdHora").value);
+
 	switch (true) 
 	{
 		case (vHora >= 7 && vHora <= 11): 
