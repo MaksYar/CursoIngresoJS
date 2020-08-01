@@ -6,7 +6,7 @@ function mostrar()
 	let sexo;
 
 	do {
-		sexo = prompt("Ingrese alguno de los dos sexos","En este campo");
+		sexo = prompt("Ingrese uno de los dos sexos","En este campo");
 	}
 	  while (!(sexo== "f" || sexo=="m"));
 
