@@ -14,22 +14,27 @@ let comparador;
 let intentos = 0;
 
 function comenzar() {
-vNum=0
   vNum = Math.round(Math.random() * (vMaximo - vMinimo) + vMinimo);
   alert("Numero generado");
 }
 
 function verificar() {
   comparador = parseInt(document.getElementById("txtIdNumero").value);
-  intentos++;
-  document.getElementById("txtIdIntentos").value = intentos;
-  if (comparador == vNum) {
-    alert("Usted es un ganador!!! y en solo " + intentos + "intentos.");
+  if ((comparador > 0 && comparador < 100)) {
+    intentos++;
+    document.getElementById("txtIdIntentos").value = intentos;
+    if (comparador == vNum) {
+      alert("Usted es un ganador!!! y en solo " + intentos + "intentos.");
+    }
+    else if (comparador >= vNum) {
+      alert("Se pasó del número secreto.");
+    }
+    else {
+      alert("falta para llegar al número secreto.");
+    }
   }
-  else if (comparador >= vNum){
-    alert("Se pasó del número secreto.");
+  else {
+    alert("Lo ingresado no es valido");
+    document.getElementById("txtIdNumero").value = "";
   }
-else {
-  alert("falta para llegar al número secreto.");
-}
 }

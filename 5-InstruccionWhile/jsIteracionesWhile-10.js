@@ -51,15 +51,22 @@ if(i==1){
 alert("No se ingreso ningun numero");
 }
 else{
+	if(nPos==0){
+	nPos=1;
+	}
+	if(nNeg==0){
+	nNeg=1;
+	}
+	document.write("<b><h1>Resultados de numeros ingresados</h1><p>")
+	document.write("La suma de los numeros negativos da: "+ negativos*(-1)+ "<br>");
+	document.write("La suma de los numeros positivos da: "+ positivos+ "<br>");
+	document.write("La cantidad de numeros positivos ingresados es: "+ nPos+ "<br>");
+	document.write("La cantidad de numeros negativos ingresados es: "+ nNeg + "<br>");
+	document.write("La cantidad de ceros ingresados es: "+ nCeros+ "<br>");
+	document.write("La cantidad de numeros pares ingresados es: "+ nPares+ "<br>");
+	document.write("El promedio de los numeros positivos ingresados es: "+ (positivos/nPos).toFixed(2)+ "<br>");
+	document.write("El promedio de los numeros negativos ingresados es: "+ ((negativos/nNeg)*(-1)).toFixed(2)+ "<br>");
+	document.write("La diferencia entre los numeros positivos y negativos da: "+ (positivos+negativos)+"</b>");
 
-alert("La suma de los numeros negativos da: "+ negativos*(-1));
-alert("La suma de los numeros positivos da: "+ positivos);
-alert("La cantidad de numeros positivos ingresados es: "+ nPos);
-alert("La cantidad de numeros negativos ingresados es: "+ nNeg);
-alert("La cantidad de ceros ingresados es: "+ nCeros);
-alert("La cantidad de numeros pares ingresados es: "+ nPares);
-alert("El promedio de los numeros positivos ingresados es: "+ (positivos/nPos).toFixed(2));
-alert("El promedio de los numeros negativos ingresados es: "+ ((negativos/nNeg)*(-1)).toFixed(2));
-alert("La diferencia entre los numeros positivos y negativos da: "+ (positivos+negativos));
 }
 }//FIN DE LA FUNCIÓN
